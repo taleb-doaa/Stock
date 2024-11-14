@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Authentification</title>
+    <style>
+        body {
+            background-image: url('arriere.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .login-container {
+            width: 400px;
+            max-width: 100%;
+            background: rgba(0, 0, 0, 0.75);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .login-container .form-group {
+            margin-bottom: 15px;
+        }
+
+        .login-container .btn {
+            width: 100%;
+            background-color: #226D68;
+            border: none;
+        }
+
+        .login-container .btn:hover {
+            background-color: #1b5956;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .login-container p {
+            color: #ccc;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <h2 class="text-center mb-4">Connexion</h2>
+        <form>
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Adresse email</label>
+                <input type="email" class="form-control" id="email" placeholder="Entrez votre email">
+            </div>
+            <div class="form-group">
+                <label for="password"><i class="fas fa-lock"></i> Mot de passe</label>
+                <input type="password" class="form-control" id="password" placeholder="Entrez votre mot de passe">
+            </div>
+            <button type="submit" class="btn btn-primary">Se connecter</button>
+        </form>
+        <p class="text-center mt-3">Pas encore de compte ? <a href="inscription.html" style="color: #f39c12;">S'inscrire</a></p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

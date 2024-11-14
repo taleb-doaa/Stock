@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Système de Gestion de Stocks</title>
+    <style>
+        .carousel-item img {
+            height: 500px; /* Ajuster la hauteur du carrousel */
+            object-fit: cover;
+        }
+
+        .service-item, .category-item {
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .service-item:hover, .category-item:hover {
+            transform: scale(1.05);
+        }
+
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .section-title {
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #226D68;
+            color: #fff;
+        }
+
+        footer {
+            background-color: #343a40;
+        }
+
+        footer a {
+            color: #fff;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="logo.webp" alt="ConnectStore Logo" height="30" class="mr-2">
+            ConnectStore
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="front.html">Accueil</a> <!-- Lien modifié -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="stocks.html">Gérer les Stocks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="reports.html">Rapports</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="settings.html">Paramètres</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="5000">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="stock6.jpg" class="d-block w-100" alt="Gestion des Stocks">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Solutions Efficaces de Gestion des Stocks</h5>
+                    <p>Optimisez votre inventaire avec notre système avancé de gestion des stocks. Suivez les niveaux de stock, gérez les commandes et générez des rapports facilement.</p>
+                    <a href="plus.html" class="btn btn-primary">En savoir plus</a>
+                    <a href="authentification.html" class="btn btn-light btn-lg">Commencer</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="stock8.jpg" class="d-block w-100" alt="Fonctionnalités de Stock">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Suivi en Temps Réel des Inventaires</h5>
+                    <p>Surveillez les niveaux de stock en temps réel et recevez des alertes pour les inventaires faibles. Restez en avance avec des données précises et des mises à jour opportunes.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="stock7.jpg" class="d-block w-100" alt="Fonctionnalités de Stock">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Gestion Dynamique des Inventaires</h5>
+                    <p>Accédez à une vue en temps réel de vos stocks grâce à notre système dynamique. Recevez des alertes instantanées dès que les niveaux de stock atteignent des seuils critiques, et ajustez vos opérations en conséquence. Notre technologie vous aide à anticiper les besoins, à éviter les ruptures et à garantir une gestion fluide de votre inventaire.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="stock11.jpg" class="d-block w-100" alt="Fonctionnalités de Stock">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Surveillance Intelligente de vos Stocks</h5>
+                    <p>Obtenez des mises à jour instantanées sur vos niveaux de stock et recevez des alertes lorsque des seuils critiques sont atteints. Optimisez vos opérations pour éviter les pénuries et maintenir une gestion efficace de l'inventaire.</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Précédent</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Suivant</span>
+        </a>
+    </div>
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-2 text-center">
+                <div class="col-12 wow fadeInUp" data-wow-delay="0.3s">
+                    <h1 style="color:#226D68;">Améliorez votre Gestion des Stocks avec ConnectStore</h1>
+                    <p class="mb-5">Gérez efficacement votre stock, suivez les niveaux d'inventaire et générez des rapports utiles avec notre système complet de gestion des stocks.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item text-center pt-3 shadow">
+                        <div class="p-4">
+                            <i class="fas fa-bell fa-2x mb-4"></i>
+                            <h5 class="mb-3">Alertes en Temps Réel</h5>
+                            <p>Recevez des notifications instantanées pour les niveaux de stock faibles afin de prévenir les pénuries.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item text-center pt-3 shadow">
+                        <div class="p-4">
+                            <i class="fas fa-chart-line fa-2x mb-4"></i>
+                            <h5 class="mb-3">Rapports Complets</h5>
+                            <p>Générez des rapports détaillés sur les niveaux de stock, les ventes et les tendances pour prendre des décisions éclairées.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item text-center pt-3 shadow">
+                        <div class="p-4">
+                            <i class="fas fa-boxes fa-2x mb-4"></i>
+                            <h5 class="mb-3">Gestion des Commandes</h5>
+                            <p>Optimisez le traitement des commandes avec un suivi facile des commandes entrantes et sortantes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item text-center pt-3 shadow">
+                        <div class="p-4">
+                            <i class="fas fa-user-cog fa-2x mb-4"></i>
+                            <h5 class="mb-3">Paramètres Flexibles</h5>
+                            <p>Personnalisez votre expérience en ajustant les paramètres selon vos besoins spécifiques de gestion des stocks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100" src="stock9.avif" alt=""
+                            style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="section-title bg-white text-start pe-3">À Propos de Nous</h6>
+                    <h1 class="mb-4" style="color:#004d40;">Bienvenue sur ConnectStore</h1>
+                    <p class="mb-4">Chez ConnectStore, notre objectif est de fournir aux entreprises une solution efficace et conviviale pour gérer leur inventaire. Notre système est conçu pour améliorer votre contrôle des stocks et rationaliser vos processus de gestion des stocks.</p>
+                    <p class="mb-4">Avec des fonctionnalités avancées telles que les alertes en temps réel, les rapports complets et la gestion des commandes, nous visons à vous aider à maintenir des niveaux de stock optimaux et à prendre des décisions basées sur des données.</p>
+                    <a href="plus.html" class="btn btn-primary">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Categories Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-2 text-center">
+                <div class="col-12 wow fadeInUp" data-wow-delay="0.3s">
+                    <h1 style="color:#226D68;">Explorez nos Catégories</h1>
+                    <p class="mb-5">Découvrez nos différentes catégories pour une gestion optimisée de vos stocks.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="category-item text-center pt-3 shadow">
+                        <div class="p-4">
+                            <i class="fas fa-warehouse fa-2x mb-4"></i>
+                            <h5 class="mb-3">Entrepôt</h5>
+                            <p>Gestion de l'entrepôt et optimisation des espaces de stockage.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="category-item text-center pt-3 shadow">
+                        <div class="p-4">
+                            <i class="fas fa-truck fa-2x mb-4"></i>
+                            <h5 class="mb-3">Logistique</h5>
+                            <p>Gestion des livraisons et des opérations logistiques pour une chaîne d'approvisionnement fluide.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="category-item text-center pt-3 shadow">
+                        <div class="p-4">
+                            <i class="fas fa-tags fa-2x mb-4"></i>
+                            <h5 class="mb-3">Produits</h5>
+                            <p>Gestion des produits et suivi des stocks disponibles.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="category-item text-center pt-3 shadow">
+                        <div class="p-4">
+                            <i class="fas fa-cogs fa-2x mb-4"></i>
+                            <h5 class="mb-3">Paramètres</h5>
+                            <p>Configuration des paramètres pour une gestion personnalisée des stocks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Categories End -->
+
+    <!-- Footer Start -->
+    <footer class="bg-dark text-white mt-5 pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-uppercase">À Propos</h5>
+                    <p>ConnectStore est votre solution ultime pour une gestion efficace et intelligente de vos stocks.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-uppercase">Liens Utiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="front.html">Accueil</a></li> <!-- Lien modifié -->
+                        <li><a href="stocks.html">Gérer les Stocks</a></li>
+                        <li><a href="reports.html">Rapports</a></li>
+                        <li><a href="settings.html">Paramètres</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-uppercase">Contact</h5>
+                    <p>123 Rue de l'Inventaire<br>Ville, État, 12345<br>Email: info@connectstore.com<br>Téléphone: +123 456 7890</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-uppercase">Suivez-nous</h5>
+                    <div class="d-flex">
+                        <a href="#" class="text-white mr-4"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white mr-4"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white mr-4"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="small">© 2024 ConnectStore. Tous droits réservés.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

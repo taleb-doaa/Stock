@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>En savoir plus</title>
+    <style>
+        body {
+    background-image: url('image.jpg');
+    background-size: 100% 100%; /* Ajuste l'image à la taille exacte de l'élément */
+    background-position: center;
+    background-repeat: no-repeat; /* Empêche l'image de se répéter */
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+        .info-container {
+            background: rgba(0, 0, 0, 0.75);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            max-width: 800px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .info-container h2 {
+            margin-bottom: 20px;
+            color: #f39c12;
+        }
+
+        .info-container p {
+            margin-bottom: 15px;
+            color: #ddd;
+        }
+
+        .info-container i {
+            color: #f39c12;
+            margin-right: 10px;
+        }
+
+        .info-container .btn {
+            background-color: #226D68;
+            border: none;
+            width: 100%;
+            padding: 10px;
+        }
+
+        .info-container .btn:hover {
+            background-color: #1b5956;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="info-container">
+        <h2 class="text-center mb-4">En savoir plus</h2>
+        <p><i class="fas fa-info-circle"></i> Le groupe OCP est un leader mondial dans l'industrie des phosphates, avec une présence dans plus de 15 pays. OCP s'engage à fournir des produits de haute qualité pour l'agriculture et l'industrie chimique.</p>
+        <p><i class="fas fa-globe"></i> Fondé en 1920, OCP a su évoluer au fil des décennies pour devenir un acteur incontournable du marché des phosphates, avec des opérations minières et des installations de production à la pointe de la technologie.</p>
+        <p><i class="fas fa-building"></i> L'entreprise se distingue par ses efforts constants en matière d'innovation et de développement durable, visant à minimiser l'impact environnemental tout en maximisant la qualité de ses produits.</p>
+        <a href="front.html" class="btn btn-primary">Retour à l'accueil</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
